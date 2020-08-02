@@ -1,0 +1,53 @@
+# Covers Visual Studio files:
+# Based on https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
+.vs/
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.userprefs
+mono_crash.*
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+*.VisualState.xml
+TestResult.xml
+nunit-*.xml
+project.lock.json
+project.fragment.lock.json
+artifacts/
+StyleCopReport.xml
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+*.dotCover
+coverage*[.json, .xml, .info]
+*.coverage
+*.coveragexml
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+*.nuget.props
+*.nuget.targets
+
+# Covers Xamarin Android:
+**/*.Droid/**/[Rr]esource.[Dd]esigner.cs
+
+# Covers JetBrains Rider:
+# Based on https://github.com/github/gitignore/blob/master/Global/JetBrains.gitignore
+.idea/
+
+# Covers MacOS files:
+# Based on https://github.com/github/gitignore/blob/master/Global/macOS.gitignore
+.DS_Store
