@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCrossAlerts.Core", "Mvv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCrossAlerts.Android", "MvvmCrossAlerts.Android\MvvmCrossAlerts.Android.csproj", "{E2593B9E-0021-4CBC-8255-FF2651F30FE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmCrossAlerts.iOS", "MvvmCrossAlerts.iOS\MvvmCrossAlerts.iOS.csproj", "{939FA548-DD8B-466C-9BE8-7528A1AD9812}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,5 +40,17 @@ Global
 		{E2593B9E-0021-4CBC-8255-FF2651F30FE6}.Release|iPhone.Build.0 = Release|Any CPU
 		{E2593B9E-0021-4CBC-8255-FF2651F30FE6}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E2593B9E-0021-4CBC-8255-FF2651F30FE6}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|iPhone.Build.0 = Debug|iPhone
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|iPhone.ActiveCfg = Release|iPhone
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|iPhone.Build.0 = Release|iPhone
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{939FA548-DD8B-466C-9BE8-7528A1AD9812}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 	EndGlobalSection
 EndGlobal
