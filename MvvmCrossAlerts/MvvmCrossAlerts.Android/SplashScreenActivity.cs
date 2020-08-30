@@ -1,11 +1,12 @@
 using Android.App;
-using MvvmCross.Droid.Support.V7.AppCompat;
+using MvvmCross.Platforms.Android.Core;
+using MvvmCross.Platforms.Android.Views;
 using MvvmCrossAlerts.Core;
 
 namespace MvvmCrossAlerts.Android
 {
     [Activity(MainLauncher = true, NoHistory = true)]
-    public class SplashScreenActivity : MvxSplashScreenAppCompatActivity<MvxAppCompatSetup<App>, App>
+    public class SplashScreenActivity : MvxSplashScreenActivity<MvxAndroidSetup<App>, App>
     {
         public SplashScreenActivity() : base(Resource.Layout.SplashScreen)
         {
