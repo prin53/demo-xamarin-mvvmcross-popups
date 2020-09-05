@@ -24,16 +24,12 @@ namespace MvvmCrossAlerts.Core
 
         private Task LoginAsync()
         {
-            CloseCompletionSource?.TrySetResult(Username);
-
-            return NavigationService.Close(this);
+            return NavigationService.Close(this, Username);
         }
 
         private Task CancelAsync()
         {
-            CloseCompletionSource?.TrySetCanceled();
-
-            return NavigationService.Close(this);
+            return NavigationService.Close(this, null);
         }
     }
 }
