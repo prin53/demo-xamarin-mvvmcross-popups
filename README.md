@@ -2,7 +2,7 @@
 
 An example demonstrating how to display pop-ups in a cross-platform way using plain ViewModels.
 
-# Tutorial:
+# Tutorial
 [Pop-ups in Xamarin and MvvmCross](https://ref.sbyte.dev/pop-ups-in-xamarin-and-mvvmcross)
 
 ## Contributing
