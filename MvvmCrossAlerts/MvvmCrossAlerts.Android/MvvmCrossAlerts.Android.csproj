@@ -76,8 +76,8 @@
         <AndroidResource Include="Resources\values\styles.xml" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="MvvmCross" Version="7.0.0" />
-        <PackageReference Include="SByteDev.Common.Extensions" Version="1.0.5" />
+        <PackageReference Include="MvvmCross" Version="7.1.2" />
+        <PackageReference Include="SByteDev.Common.Extensions" Version="1.0.6" />
     </ItemGroup>
     <ItemGroup>
       <ProjectReference Include="..\MvvmCrossAlerts.Core\MvvmCrossAlerts.Core.csproj">
