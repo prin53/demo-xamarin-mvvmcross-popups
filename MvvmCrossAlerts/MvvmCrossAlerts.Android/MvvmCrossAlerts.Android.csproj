@@ -57,6 +57,7 @@
     <ItemGroup>
         <Compile Include="LoginDialogFragment.cs" />
         <Compile Include="MainActivity.cs" />
+        <Compile Include="MvxAlertDialogFragment.cs" />
         <Compile Include="Resources\Resource.Designer.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="SplashScreenActivity.cs" />

@@ -11,9 +11,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:MvxBind="Error UsernameValidationError"
         android:hint="Username">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/UsernameEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:MvxBind="Text Username" />
@@ -24,9 +26,11 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:MvxBind="Error PasswordValidationError"
         android:hint="Password">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/PasswordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType = "textPassword"

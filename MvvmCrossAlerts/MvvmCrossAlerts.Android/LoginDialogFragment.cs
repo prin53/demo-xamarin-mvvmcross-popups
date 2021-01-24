@@ -1,11 +1,9 @@
-using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
-using MvvmCross.Platforms.Android.Binding.BindingContext;
+using Android.Widget;
 using MvvmCross.Platforms.Android.Presenters.Attributes;
-using MvvmCross.Platforms.Android.Views.Fragments;
 using MvvmCrossAlerts.Core;
 using SByteDev.Common.Extensions;
 
@@ -13,42 +11,68 @@ namespace MvvmCrossAlerts.Android
 {
     [MvxDialogFragmentPresentation]
     [Register(nameof(LoginDialogFragment))]
-    public class LoginDialogFragment : MvxDialogFragment<LoginViewModel>
+    public class LoginDialogFragment : MvxAlertDialogFragment<LoginViewModel>
     {
-        private void OnPositiveButtonClick(object sender, DialogClickEventArgs e)
+        private EditText _usernameEditText;
+        private EditText _passwordEditText;
+
+        protected override int LayoutResourceId => Resource.Layout.Login;
+
+        public override void OnViewCreated(View view, Bundle savedInstanceState)
         {
-            ViewModel.LoginCommand.SafeExecute();
+            base.OnViewCreated(view, savedInstanceState);
+
+            _usernameEditText = view.FindViewById<EditText>(Resource.Id.UsernameEditText);
+            _passwordEditText = view.FindViewById<EditText>(Resource.Id.PasswordEditText);
+
+            _usernameEditText!.FocusChange += OnUsernameEditTextOnFocusChange;
+            _passwordEditText!.FocusChange += OnPasswordEditTextOnFocusChange;
+
+            Title = "Login";
+            Message = "Enter your username and login in the fields below:";
+
+            SetButton(DialogButtonType.Positive, "Login", ViewModel.LoginCommand);
+            SetButton(DialogButtonType.Negative, "Cancel", ViewModel.CancelCommand);
         }
 
-        private void OnNegativeButtonClick(object sender, DialogClickEventArgs e)
+        private void OnUsernameEditTextOnFocusChange(object _, View.FocusChangeEventArgs args)
         {
-            ViewModel.CancelCommand.SafeExecute();
-        }
-
-        public override Dialog OnCreateDialog(Bundle savedInstanceState)
-        {
-            return new AlertDialog.Builder(Activity)
-                .SetTitle("Login")
-                .SetPositiveButton("Login", OnPositiveButtonClick)
-                .SetNegativeButton("Cancel", OnNegativeButtonClick)
-                .Create();
-        }
-
-        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
-        {
-            base.OnCreateView(inflater, container, savedInstanceState);
-
-            return this.BindingInflate(Resource.Layout.Login, null);
-        }
-
-        public override void OnActivityCreated(Bundle savedInstanceState)
-        {
-            base.OnActivityCreated(savedInstanceState);
-
-            if (Dialog is AlertDialog alertDialog)
+            if (args.HasFocus)
             {
-                alertDialog.SetView(View);
+                return;
             }
+
+            ViewModel.ValidateUsernameCommand.SafeExecute();
+        }
+
+        private void OnPasswordEditTextOnFocusChange(object _, View.FocusChangeEventArgs args)
+        {
+            if (args.HasFocus)
+            {
+                return;
+            }
+
+            ViewModel.ValidatePasswordCommand.SafeExecute();
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                var usernameEditText = _usernameEditText;
+                if (usernameEditText != null)
+                {
+                    usernameEditText.FocusChange -= OnUsernameEditTextOnFocusChange;
+                }
+
+                var passwordEditText = _passwordEditText;
+                if (passwordEditText != null)
+                {
+                    passwordEditText.FocusChange -= OnPasswordEditTextOnFocusChange;
+                }
+            }
+
+            base.Dispose(disposing);
         }
     }
 }
