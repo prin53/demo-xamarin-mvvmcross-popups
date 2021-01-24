@@ -66,6 +66,7 @@
         <Compile Include="MvxAlertIosViewPresenter.cs" />
         <Compile Include="MvxAlertViewController.cs" />
         <Compile Include="Setup.cs" />
+        <Compile Include="StringValueCombiner.cs" />
         <None Include="Info.plist" />
         <Compile Include="LoginViewController.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
