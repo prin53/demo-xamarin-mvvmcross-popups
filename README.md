@@ -8,8 +8,8 @@ An example demonstrating how to display and validate pop-ups in a cross-platform
 </p>
 
 # Tutorial
-- [How to create a custom pop-up in Xamarin with MvvmCross in the right way](https://ref.sbyte.dev/pop-up-xamarin)
-- [Pop-up validation in Xamarin with MvvmCross](https://ref.sbyte.dev/pop-up-validation-xamarin)
+- [How to create a custom pop-up in Xamarin with MvvmCross in the right way](https://link.sbyte.dev/blog/prin53/pop-up-xamarin)
+- [Pop-up validation in Xamarin with MvvmCross](https://link.sbyte.dev/blog/prin53/pop-up-validation-xamarin)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
